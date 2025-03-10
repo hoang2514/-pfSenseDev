@@ -14,9 +14,11 @@
 
 1. Tải file PfSense iso
 
+    [Tải pfSense-CE-v2.6.0](https://github.com/hoang2514/-pfSenseDev/releases/tag/PfSense)
+   
     ![image](https://github.com/user-attachments/assets/18679a27-bb0d-4067-93ca-93aa8b04a79a)
 
-2. Cấu hình mạng( Tạo các bộ chuyển mạch mới để tạo các giao diện WAN và LAN khác nhau) 
+1. Cấu hình mạng( Tạo các bộ chuyển mạch mới để tạo các giao diện WAN và LAN khác nhau) 
   - Bước 1: Chọn Vitural Switch Machine...
 
     ![image](https://github.com/user-attachments/assets/6f66ca63-7e36-476f-8110-18b96fd51cef)

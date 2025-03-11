@@ -1,4 +1,4 @@
-**I. CÁCH BẬT HYPER-V TRÊN WINDOWS 11 HOME**
+![image](https://github.com/user-attachments/assets/d450fc1c-676c-468b-bbf2-0eee7a4c546d)**I. CÁCH BẬT HYPER-V TRÊN WINDOWS 11 HOME**
 
   - Bước 1: tạo file enable-hyperv.bat với nội dung sau:
 
@@ -10,7 +10,7 @@
 
 
 
-**II.QUY TRÌNH CÀI ĐẶT PFSENSE**
+**II. QUY TRÌNH CÀI ĐẶT PFSENSE**
 
 1. Tải file PfSense iso
 
@@ -61,6 +61,31 @@
     ![image](https://github.com/user-attachments/assets/72988e22-8f36-4864-83fd-b19ea62ab915)
 
   - Finish.
+
+4. Setting PfSense
+  - Chuột phải vào PfSense_VM chọn Settings...
+  - Add Hardware -> Network Adapter -> Add
+
+    ![image](https://github.com/user-attachments/assets/5dfea275-4a9b-4b1f-a604-4b57cb5d6d9c)
+
+  - Ở trường Vitural switch chọn LAN_Switch -> Apply
+
+    ![image](https://github.com/user-attachments/assets/e4f8bfaf-8d8e-456e-9d5f-54e1d05751de)
+
+  - Ở Firmware Move up Hard ware lên đầu-> apply
+
+    ![image](https://github.com/user-attachments/assets/54458a77-7260-4a8b-971e-2ecb8f3eafaa)
+    ![image](https://github.com/user-attachments/assets/86a4cb39-812a-4da0-b757-1786a4e46d57)
+    
+  - Vào mục Security bỏ chọn Enable Secure Boot rồi apply
+
+    ![image](https://github.com/user-attachments/assets/eece2f27-c5db-4169-889d-1cce906415fe)
+
+  - OK và kết thúc.
+
+
+**III. CẤU HÌNH PFSENSE**
+1. Truy cạp giao diện web của PfSense
 
 
 

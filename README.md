@@ -18,7 +18,7 @@
    
     ![image](https://github.com/user-attachments/assets/18679a27-bb0d-4067-93ca-93aa8b04a79a)
 
-1. Cấu hình mạng( Tạo các bộ chuyển mạch mới để tạo các giao diện WAN và LAN khác nhau) 
+2. Cấu hình mạng( Tạo các bộ chuyển mạch mới để tạo các giao diện WAN và LAN khác nhau) 
   - Bước 1: Chọn Vitural Switch Machine...
 
     ![image](https://github.com/user-attachments/assets/6f66ca63-7e36-476f-8110-18b96fd51cef)
@@ -44,7 +44,7 @@
     
     ![image](https://github.com/user-attachments/assets/37aabb3a-36cc-4ab7-86ad-82167eb92b98)
 
-  - Ở Assign memory, Startup memory để 2048MB rồi nhấn next
+  - Ở Assign memory, Startup memory có thể để 2048MB rồi nhấn next
 
     ![image](https://github.com/user-attachments/assets/698f2155-0b31-4c3e-9f85-2e6a8dbc038e)
 
@@ -52,7 +52,7 @@
 
     ![image](https://github.com/user-attachments/assets/1dadd763-b244-4c06-8426-f065ea8668b1)
 
-  - Conect vitural hard dish thiết lập thông số như sau:
+  - Conect vitural hard dish có thể thiết lập thông số như sau:
 
     ![image](https://github.com/user-attachments/assets/da7236a0-fa2b-442e-88df-cda8d7488ca0)
 

@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/d450fc1c-676c-468b-bbf2-0eee7a4c546d)**I. CÁCH BẬT HYPER-V TRÊN WINDOWS 11 HOME**
+
+
+**I. CÁCH BẬT HYPER-V TRÊN WINDOWS 11 HOME**
 
   - Bước 1: tạo file enable-hyperv.bat với nội dung sau:
 

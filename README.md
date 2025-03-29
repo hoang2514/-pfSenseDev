@@ -20,7 +20,7 @@
    
     ![image](https://github.com/user-attachments/assets/18679a27-bb0d-4067-93ca-93aa8b04a79a)
 
-2. Cấu hình mạng( Tạo các bộ chuyển mạch mới để tạo các giao diện WAN và LAN khác nhau) 
+2. Cấu hình mạng -  gán interface ( Tạo các bộ chuyển mạch mới để tạo các giao diện WAN và LAN khác nhau) 
   - Bước 1: Chọn Vitural Switch Machine...
 
     ![image](https://github.com/user-attachments/assets/6f66ca63-7e36-476f-8110-18b96fd51cef)
@@ -87,7 +87,62 @@
 
 
 **III. CẤU HÌNH PFSENSE**
-1. Truy cạp giao diện web của PfSense
+1. Cấu hình mạng - gán IP tĩnh cho mạng LAN
+  - Khởi động pfsense lần đầu tiên và cấu hình ip tĩnh cho mạng LAN (192.168.1.1/24)
+
+    ![image](https://github.com/user-attachments/assets/807cf193-79cf-478c-b002-fb28641532f6)
+
+2. Truy cập giao diện quản trị (Web GUI) của PfSense
+  - Mở trình duyệt truy cập 192.168.1.1 để vào giao diện quản trị
+
+    ![image](https://github.com/user-attachments/assets/10cbdcdc-09f7-486a-9dac-6e91f26e5d33)
+
+  - đăng nhập với usename mặc định là admin password mặc định là pfsense
+
+    ![image](https://github.com/user-attachments/assets/a9ff334d-0bfb-4663-b26c-bdc36710f844)
+
+  - Sau khi đăng nhập sẽ có giao diện như sau:
+
+    ![image](https://github.com/user-attachments/assets/8284fbc9-f634-4ba6-a0f4-026801259263)
+
+  - Nhấn next 2 lần rồi thiết lập các thông số như sau:
+
+    ![image](https://github.com/user-attachments/assets/7c2420ce-dc69-43f5-a838-b8d223230d94)
+
+  - Tiếp theo là thiết lập múi giờ
+
+    ![image](https://github.com/user-attachments/assets/341f9b4f-c60d-4a56-9435-1e1ff4d8d30a)
+
+  - Sau đó thiết lập mạng WAN (DHCP)
+
+    ![image](https://github.com/user-attachments/assets/e901474d-64a6-4b1e-8a69-3352236e6d83)
+    
+  - Tiếp theo sẽ thay đổi địa chỉ mạng LAN của tường lửa để tránh xung đột
+
+    ![image](https://github.com/user-attachments/assets/8581ae61-8106-4518-8ca1-a8099cf0da86)
+
+  - Tiếp theo là set admin password
+
+    ![image](https://github.com/user-attachments/assets/acdaa801-2dd6-495d-9d80-98fe65f59e74)
+
+  - LAN mới có địa chỉ là 10.20.20.1
+
+    ![image](https://github.com/user-attachments/assets/c3fd480e-bfe3-4e22-84fa-f525b73e8280)
+
+3. cấu hình PfSense để chống DDos và IDS
+
+   - Cấu hình Firewall cơ bản để chống DDos
+     
+       - 
+
+
+  
+
+
+
+    
+
+
 
 
 

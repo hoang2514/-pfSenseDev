@@ -129,11 +129,57 @@
 
     ![image](https://github.com/user-attachments/assets/c3fd480e-bfe3-4e22-84fa-f525b73e8280)
 
-3. cấu hình PfSense để chống DDos và IDS
+3. Dựng máy chủ web và đưa vào vùng DMZ, được PfSense bảo vệ
 
-   - Cấu hình Firewall cơ bản để chống DDos
+   - Tạo switch ảo cho DMZ
      
-       - 
+       - Bước 1 chọn Virtual Switch Manager…
+       
+         ![image](https://github.com/user-attachments/assets/458304dc-0983-4b2b-8309-f5a441a250f8)
+ 
+       -  Bước 2 tạo Switch mới: chọn  “New virtual network switch” rồi chọn loại Internal rồi Create  Virtual Switch
+       
+          ![image](https://github.com/user-attachments/assets/d3783197-6da2-47f2-bc54-dffb7912a166)
+          
+       -  Bước 3: Cấu hình Switch: name DMZ_Switch -> Type chọn Internal -> Apply -> Ok
+    
+          ![image](https://github.com/user-attachments/assets/472b5e80-fad2-4c8e-8b08-092d6b69d6d4)
+    
+   -  Thêm một card mạng cho pfSense gán vào DMZ
+       -  Chuột phải vào máy pfSense VM -> Settings -> Add Hardware -> Network Adapter -> Add -> Gán vào Virtual Switch: chọn DMZ_Switch -> Apply -> OK
+    
+          ![image](https://github.com/user-attachments/assets/7b6d0670-3da9-4980-a1dd-3f2cc08a6afa)
+    
+   -   Khởi động pfSense -> gán interface DMZ
+       -   Chọn option 1
+    
+          ![image](https://github.com/user-attachments/assets/942d2b67-5c1d-4df5-b5b7-e9d62405c164)
+    
+       -   khi được hỏi là Should VLANs be set up now gõ n
+       -   rồi gõ lần lượt hn0 hn1 hn2
+       -   cuối cùng nếu hỏi là Do you want to proceed gõ y
+    
+          ![image](https://github.com/user-attachments/assets/fa74900d-ad59-418e-a64c-a60c394fd4a4)
+   -   Cấp IP interface DMZ
+       -   Ở màn hình menu chính pfSense chọn option 2 rồi enter
+       -   Gõ số tương ứng với OPT1 rồi nhấn Enter
+    
+          ![image](https://github.com/user-attachments/assets/098695aa-ae69-45ec-8e23-e77c75e5e5d7)
+       -   pfSense hỏi: Enter the new LAN IPv4 address: 192.168.100.1 rồi nhấn Enter
+       -   rồi sau đó làm theo ảnh sau
+    
+         ![image](https://github.com/user-attachments/assets/6294efa3-0eb6-4020-b57d-24590cd2f45e)
+   -  Cấu hình máy chủ Web Apache2 bằng Docker  
+
+
+
+
+
+
+
+
+     
+
 
 
   

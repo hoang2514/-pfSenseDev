@@ -169,7 +169,32 @@
        -   rồi sau đó làm theo ảnh sau
     
          ![image](https://github.com/user-attachments/assets/6294efa3-0eb6-4020-b57d-24590cd2f45e)
-   -  Cấu hình máy chủ Web Apache2 bằng Docker  
+   -   Cấu hình máy chủ Web Apache2 bằng Docker
+       -   Mở  docker desktop trên máy vật lý
+       -   Mở  CMD  chạy docker version và màn hình hiện như sau
+    
+           ![image](https://github.com/user-attachments/assets/909e35b5-1869-40ee-8e7f-63521420bd35)
+       -   chạy lệnh sau trong CMD với DMZ interface là 192.168.100.1/24 đã cấu hình trước đó( tạo mạng docker mô phỏng mạng DMZ)
+    
+           ![image](https://github.com/user-attachments/assets/d797dffd-79f4-45f9-9149-f009cd58fa1b)
+       -   Chạy container Apache 2 trong mạng đó(httpd là image chính thức của Apache từ Docker Hub.Container này sẽ chạy Apache và lắng nghe trên cổng 80.IP 192.168.100.10 nằm trong mạng DMZ )
+    
+           ![image](https://github.com/user-attachments/assets/df987995-6c4a-4fb5-86b4-d79c962a61d6)
+       -   Kiểm tra container hoạt động bằng câu lệnh docker ps
+    
+           ![image](https://github.com/user-attachments/assets/501ba90f-a151-4e08-946d-a4f434ddcdef)
+         -   kiểm tra bằng cách truy cập 192.168.100.10. Nếu không truy cập được cần gán địa chỉ IP tĩnh cho máy trong DMZ
+         -   mở Network Connections -> Tìm adapter có tên: vEthernet (DMZ_Switch) -> Chuột phải → Properties → Internet Protocol Version 4 (TCP/IPv4) → Properties -> IP address: 192.168.100.10 -> Subnet mask: 255.255.255.0 -> Default gateway: 192.168.100.1
+         -   ![image](https://github.com/user-attachments/assets/c63d3105-8042-402d-9086-b2821224882e)
+         -   ![image](https://github.com/user-attachments/assets/bb8ebbef-c33b-49ea-bbc7-2baf0142befd)
+         -   ![image](https://github.com/user-attachments/assets/c0caa018-f619-4417-b68a-df357f47c236)
+
+
+
+
+
+
+
 
 
 

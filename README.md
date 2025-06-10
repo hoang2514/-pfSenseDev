@@ -188,10 +188,41 @@
          -   ![image](https://github.com/user-attachments/assets/c63d3105-8042-402d-9086-b2821224882e)
          -   ![image](https://github.com/user-attachments/assets/bb8ebbef-c33b-49ea-bbc7-2baf0142befd)
          -   ![image](https://github.com/user-attachments/assets/c0caa018-f619-4417-b68a-df357f47c236)
+     -   Cấu hình NAT và Firewall Rule trong pfSense để truy cập Web Server Apache2 trong DMZ
+         -    Vào pfSense Web GUI → Menu: Firewall → NAT → tab Port Forward
+         -    Bấm nút Add
+         -    Điền các mục sau:
+         -    interface: WAN
+         -    protocol: TCP
+         -    destination: WAN address
+         -    Destination Port Range: HTTP
+         -    Bấm Save → Apply Changes
+         -    Vào menu: Firewall → Rules → WAN sẽ thấy 1 rule được tạo
+         -    | Action | Interface | Protocol | Destination Port | NAT IP         |
+              | ------ | --------- | -------- | ---------------- | -------------- |
+              | Pass   | WAN       | TCP      | 80 (HTTP)        | 192.168.100.10 |
 
+**IV. CÀI ĐẶT HỆ THỐNG GIÁM SÁT**
+1. Vào pfSense Web GUI
+   - Menu: System → Package Manager → tab Available Packages
+   - Gõ tìm: suricata → Bấm Install → Xác nhận → chờ vài phút để cài đặt hoàn tất
+2.  Sau khi cài xong, mở Suricata
+   - Menu mới xuất hiện: Services → Suricata → Vào tab: Interfaces → Bấm Add để thêm interface cần giám sát (ví dụ: WAN hoặc OPT1)
+   - | Trường           | Giá trị                                       |
+     | ---------------- | --------------------------------------------- |
+     | Interface        | WAN (hoặc OPT1 nếu bạn chỉ muốn giám sát DMZ) |
+     | Description      | Suricata WAN                                  |
+     | Enable Interface | ✅                                            |
+     | Promiscuous mode | ✅ (nên bật)                                  |
+     | IPS mode         | Tùy: bật nếu bạn muốn chặn tấn công           |
+     | Block offenders  | ✅ (nếu bật IPS)                              |
 
+   - Save
 
-
+3.  Cài bộ luật (rules)
+   - Vào tab: Global Settings → Tick chọn: ET Open rules (Emerging Threats) → Save → Sau đó vào tab: Updates → Bấm Download & Update Rules
+4.  Khởi động Suricata
+   - Vào tab: Interfaces → Bấm nút Start (tam giác xanh) bên cạnh interface đã cấu hình → Suricata bắt đầu hoạt động, giám sát tất cả lưu lượng qua interface đó
 
 
 

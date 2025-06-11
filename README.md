@@ -201,7 +201,7 @@
               | ------ | --------- | -------- | ---------------- | -------------- |
               | Pass   | WAN       | TCP      | 80 (HTTP)        | 192.168.100.10 |
 
-# IV. CÀI ĐẶT HỆ THỐNG GIÁM SÁT
+# V. CÀI ĐẶT HỆ THỐNG GIÁM SÁT
 1. Vào pfSense Web GUI
    - Menu: System → Package Manager → tab Available Packages
    - Gõ tìm: suricata → Bấm Install → Xác nhận → chờ vài phút để cài đặt hoàn tất

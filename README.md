@@ -1,6 +1,9 @@
+# I. Mô hình triển khai mạng bảo mật với pfSense và DMZ
+
+![image](https://github.com/user-attachments/assets/3b93e56a-b51d-4c49-b5cd-fa125bbab62a)
 
 
-**I. CÁCH BẬT HYPER-V TRÊN WINDOWS 11 HOME**
+# II. CÁCH BẬT HYPER-V TRÊN WINDOWS 11 HOME
 
   - Bước 1: tạo file enable-hyperv.bat với nội dung sau:
 
@@ -12,7 +15,7 @@
 
 
 
-**II. QUY TRÌNH CÀI ĐẶT PFSENSE**
+# III. QUY TRÌNH CÀI ĐẶT PFSENSE**
 
 1. Tải file PfSense iso
 
@@ -86,7 +89,7 @@
   - OK và kết thúc.
 
 
-**III. CẤU HÌNH PFSENSE**
+# IV. CẤU HÌNH PFSENSE
 1. Cấu hình mạng - gán IP tĩnh cho mạng LAN
   - Khởi động pfsense lần đầu tiên và cấu hình ip tĩnh cho mạng LAN (192.168.1.1/24)
 
@@ -183,11 +186,7 @@
        -   Kiểm tra container hoạt động bằng câu lệnh docker ps
     
            ![image](https://github.com/user-attachments/assets/501ba90f-a151-4e08-946d-a4f434ddcdef)
-         -   kiểm tra bằng cách truy cập 192.168.100.10. Nếu không truy cập được cần gán địa chỉ IP tĩnh cho máy trong DMZ
-         -   mở Network Connections -> Tìm adapter có tên: vEthernet (DMZ_Switch) -> Chuột phải → Properties → Internet Protocol Version 4 (TCP/IPv4) → Properties -> IP address: 192.168.100.10 -> Subnet mask: 255.255.255.0 -> Default gateway: 192.168.100.1
-         -   ![image](https://github.com/user-attachments/assets/c63d3105-8042-402d-9086-b2821224882e)
-         -   ![image](https://github.com/user-attachments/assets/bb8ebbef-c33b-49ea-bbc7-2baf0142befd)
-         -   ![image](https://github.com/user-attachments/assets/c0caa018-f619-4417-b68a-df357f47c236)
+           
      -   Cấu hình NAT và Firewall Rule trong pfSense để truy cập Web Server Apache2 trong DMZ
          -    Vào pfSense Web GUI → Menu: Firewall → NAT → tab Port Forward
          -    Bấm nút Add
@@ -202,7 +201,7 @@
               | ------ | --------- | -------- | ---------------- | -------------- |
               | Pass   | WAN       | TCP      | 80 (HTTP)        | 192.168.100.10 |
 
-**IV. CÀI ĐẶT HỆ THỐNG GIÁM SÁT**
+# IV. CÀI ĐẶT HỆ THỐNG GIÁM SÁT
 1. Vào pfSense Web GUI
    - Menu: System → Package Manager → tab Available Packages
    - Gõ tìm: suricata → Bấm Install → Xác nhận → chờ vài phút để cài đặt hoàn tất
